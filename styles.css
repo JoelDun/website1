@@ -1,0 +1,46 @@
+/* styles.css */
+nav {
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Add the following CSS rules */
+nav .left {
+  flex-grow: 1;
+}
+
+nav .center {
+  display: flex;
+  justify-content: center;
+  flex-grow: 2;
+  text-align: center;
+}
+
+nav .right {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a.centered {
+  font-size: 1.5em;
+  font-weight: bold;
+}
