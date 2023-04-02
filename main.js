@@ -1,17 +1,9 @@
-const newOrderLink = document.getElementById('new-order-link')
-const pastOrdersLink = document.getElementById('past-orders-link')
-const pastOrdersContainer = document.getElementById('past-orders-container')
+const newOrderLink = document.getElementById('new-order-link');
+const orders = [];
 
 newOrderLink.addEventListener('click', (e) => {
   e.preventDefault();
-  newOrderContainer.style.display = 'block';
-  pastOrdersContainer.style.display = 'none';
 });
-
-pastOrdersLink.addEventListener('click', (e) => {
-  e.preventDefault();
-});
-
 
 document.getElementById('add-row-button').addEventListener('click', addRow);
 
@@ -21,7 +13,7 @@ function addRow() {
   newRow.classList.add('material-row');
 
   const materialId = materialsList.childElementCount + 1;
-  
+
   newRow.innerHTML = `
     <label for="material-${materialId}">Material</label>
     <input type="text" id="material-${materialId}" name="material-${materialId}">
@@ -55,6 +47,12 @@ function submitForm(event) {
 
     orderData.materials.push({ material, quantity });
   }
+  
+  // Store the order data in localStorage
+  orders.push(orderData);
+  localStorage.setItem('orders', JSON.stringify(orders));
 
-  console.log(orderData); // Log the order data for now, you can later store this data in an array or other data structure.
+  // Redirect to the past-orders.html page
+  window.location.href = 'past-orders.html';
 }
+

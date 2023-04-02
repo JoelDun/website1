@@ -44,3 +44,21 @@ nav a.centered {
   font-size: 1.5em;
   font-weight: bold;
 }
+
+
+
+.order-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.order-container h3 {
+  margin-top: 0;
+}
+
+.order-container ul {
+  list-style-type: none;
+  padding: 0;
+}
