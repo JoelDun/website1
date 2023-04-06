@@ -26,39 +26,9 @@
     </header>
 
     <main>
-      <form id="new-order-form">
-        <label for="job-number">Job #</label>
-        <input type="text" id="job-number" name="job-number">
-
-        <label for="purchase-order-number">Purchase Order #</label>
-        <input type="text" id="purchase-order-number" name="purchase-order-number">
-
-        <label for="current-date">Current Date</label>
-        <input type="date" id="current-date" name="current-date">
-
-        <label for="requested-delivery-date">Requested Delivery Date</label>
-        <input type="date" id="requested-delivery-date" name="requested-delivery-date">
-
-        <label for="jobsite-name">Jobsite Name</label>
-        <input type="text" id="jobsite-name" name="jobsite-name">
-
-        <label for="foreman-name">Foreman's Name</label>
-        <input type="text" id="foreman-name" name="foreman-name">
-      
-      <div id="materials-list">
-        <div class="material-row">
-          <label for="material-1">Material</label>
-          <input type="text" id="material-1" name="material-1" />
-
-          <label for="quantity-1">Quantity</label>
-          <input type="number" id="quantity-1" name="quantity-1" />
-        </div>
-      </div>
-
-      <button type="button" id="add-row-button">Add Row</button>
-      <button type="submit" id="submit-button">Submit</button>
-    </form>
+        <iframe id="pdfIframe" style="width: 100%; height: 500px;"></iframe>
     </main>
-    <script src="main.js" defer></script>
+    <script src="pdfmake.min.js"></script>
+    <script src="vfs_fonts.js"></script>
   </body>
 </html>

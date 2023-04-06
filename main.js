@@ -52,7 +52,18 @@ function submitForm(event) {
   orders.push(orderData);
   localStorage.setItem('orders', JSON.stringify(orders));
 
-  // Redirect to the past-orders.html page
-  window.location.href = 'past-orders.html';
+  // Reset the form
+  event.target.reset()
+
+  //Display order success notification
+  const notification = document.createElement('div')
+  notification.classList.add('notification')
+  notification.textContent = 'Order submitted successfuly!'
+  document.body.appendChild(notification)
+
+  //Hide the notification after a few seconds
+  setTimeout(() => {
+    notification.remove()
+  }, 3000)
 }
 
